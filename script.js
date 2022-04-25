@@ -1,5 +1,6 @@
 let listaNotas = [];
 let soma = 0;
+let media = 0;
 
 function adicionarNota() {
     soma = 0;
@@ -29,17 +30,17 @@ function maiorNota() {
 }
 
 function calculaMedia() {
-    let media = (soma / listaNotas.length);
+    media = (soma / listaNotas.length);
     document.getElementById("h3Media").innerText = media.toFixed(2);
 }
 
 function situacaoAluno() {
     let imprimeSituacao = document.getElementById("h3Situacao");
     
-    if (calculaMedia() < 4) {
+    if (media < 4) {
         imprimeSituacao.innerText = "ALUNO REPROVADO";
         imprimeSituacao.style.color = "rgb(255, 0, 0)";
-    } else if (calculaMedia() == 4 || calculaMedia() < 7) {
+    } else if (media == 4 || media < 7) {
         imprimeSituacao.innerText = "ALUNO DE RECUPERAÇÃO";
         imprimeSituacao.style.color = "rgb(250, 253, 15)";
     } else {
