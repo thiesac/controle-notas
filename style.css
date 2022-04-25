@@ -1,0 +1,37 @@
+body {
+    background-image: url(school.jpg);
+}
+
+.principal {
+    background-color: rgba(255, 255, 255, 0.815);
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.625);
+    text-align: center;
+    margin: 50px 400px;
+    padding: 40px;
+}
+
+h1, h2, h3 {
+    font-family: sans-serif;
+    font-weight: 300;
+    color: rgb(45, 153, 199);
+}
+
+h3 {
+    font-size: 15px;
+}
+
+input {
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    padding: 9px;
+    margin-right: 10px;
+}
+
+button {
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    background-color: rgb(45, 153, 199);
+    color: white;
+}
