@@ -17,23 +17,28 @@ function adicionarNota() {
         document.getElementById("input-nota").value = "";
         document.getElementById("h3Notas").innerText = listaNotas.join(" | ");
         maiorNota();
+        menorNota();
         calculaMedia();
         situacaoAluno();
     }
 }
 //encontra a maior nota da lista
 function maiorNota() {
-    let listaNumeros = listaNotas.map(str => {
-        return Number(str);
-    })
-    document.getElementById("h3MaiorNota").innerText = Math.max(listaNumeros);
+    maior = Math.max(...listaNotas);
+    document.getElementById("h3MaiorNota").innerText = maior;
 }
 
+//encontra menor nota da lista
+function menorNota() {
+    menor = Math.min(...listaNotas);
+    document.getElementById("h3MenorNota").innerText = menor;
+}
+//calcula média das notas
 function calculaMedia() {
     media = (soma / listaNotas.length);
     document.getElementById("h3Media").innerText = media.toFixed(2);
 }
-
+//imprime se aluno reprovou, ficou de recuperação ou passou
 function situacaoAluno() {
     let imprimeSituacao = document.getElementById("h3Situacao");
     
