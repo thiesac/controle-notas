@@ -10,7 +10,9 @@
     <body>
         <div class="principal">
             <h1>Situação do Aluno</h1>
-            <div>
+            <h2>Média: </h2>
+            <h3 id="h3Media"></h3>
+            <div id="esconde">
                 <input type="number" placeholder="Digite nota" id="input-nota">
                 <button onclick="adicionarNota()">Adicionar</button>
             </div>
@@ -18,15 +20,25 @@
             <div>
                 <h2>Notas: </h2>
                 <h3 id="h3Notas"></h3>
+                <h2>Situação do aluno: </h2>
+                <h3 id="h3Situacao"></h3>
+            </div>
+
+            <div id="esconde2">
                 <h2>Maior nota: </h2>
                 <h3 id="h3MaiorNota"></h3>
                 <h2>Menor nota: </h2>
                 <h3 id="h3MenorNota"></h3>
-                <h2>Média: </h2>
-                <h3 id="h3Media"></h3>
-                <h2>Situação do aluno: </h2>
-                <h3 id="h3Situacao"></h3>
+                <button onclick="finalizar()">Finalizar</button>
             </div>
+            
+            <fieldset id="revela">
+                <input type="number" placeholder="Digite nota subtitutiva" id="input-subst">
+                <button onclick="substitutiva()">Adicionar</button>
+                <h2>Nova Média: </h2>
+                <h3 id="novaMedia"></h3>
+            </fieldset>
+
         </div>
     </body>
 </html>

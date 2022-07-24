@@ -37,3 +37,12 @@ button {
     background-color: rgb(45, 153, 199);
     color: white;
 }
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(46, 173, 227);
+}
+
+#revela {
+    display: none;
+}
